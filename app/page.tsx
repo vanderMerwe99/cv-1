@@ -133,6 +133,12 @@ const ReferencesSection = () => {
     {
       name: "Abram Mahlatsi",
       email: "Abram.Mahlatsi@nwu.ac.za",
+      description: "My manager while working as a Demonstrator for the NWU."
+    },
+    {
+      name: "Andre Du Toit",
+      email: "+27 83 718 6012",
+      description: "My Laboroatory Manager while working as a Junior Microbiologist at Envirocare Laboroatory."
     },
   ];
 
@@ -152,6 +158,8 @@ const ReferencesSection = () => {
               secondary={
                 <Typography variant="body2" className={classes.contactEmail}>
                   {reference.email}
+                  <br/>
+                  {reference.description}
                 </Typography>
               }
             />
@@ -280,7 +288,6 @@ const ProjectSection = () => {
 export default function EnvironmentalScientistCV() {
   const classes = useStyles();
 
-  // Define CV data (Mock data for the example)
   const name = "Michaela Koch";
   const title = "Environmental Scientist and Nature Enthusiast";
   const cell = "061 531 2807";
@@ -309,19 +316,26 @@ export default function EnvironmentalScientistCV() {
 
   const professionalExperience = [
     {
+      position: "Junior Microbiologist",
+      company: "Envirocare Laboratory",
+      duration: "Jan 2024 - Current",
+      description:
+      "At Envirocare Laboratory in Potchefstroom, I serve as a Junior Microbiologist, focusing on the precise preparation and management of crucial media for daily analytical processes. My role involves conducting thorough analyses to detect a wide range of pathogens such as Salmonella, Listeria, and Campylobacter, particularly in raw food and water samples. I ensure meticulous attention to detail and adherence to rigorous standards to uphold the integrity of our findings and contribute to maintaining public health and safety.",
+      },
+      {
       position: "Demonstrator",
       company: "North-West University",
       duration: "Feb 2023 - Sep 2023",
       description:
-        "In 2023, I served as a Demonstrator for both the first and second semesters, supporting 2nd and 3rd-year students in their practical sessions. My responsibilities included guiding students through complex procedures, emphasizing the practicals' academic significance. I prepared essential materials, conducted advanced processes like PCR and gel electrophoresis, and helped students interpret results, identifying areas for improvement and method accuracy.",
-    },
-    {
+      "During 2023, I fulfilled the role of Demonstrator at North-West University for both the first and second semesters, providing invaluable support to 2nd and 3rd-year students during their practical sessions. I guided students through intricate procedures, emphasizing the academic significance of their hands-on learning experiences. Additionally, I prepared essential materials and facilitated advanced processes such as PCR and gel electrophoresis, fostering a dynamic and engaging learning environment. My dedication extended to assisting students in interpreting results, identifying areas for improvement, and ensuring method accuracy, thereby nurturing their scientific proficiency and critical thinking skills.",
+      },
+      {
       position: "Marker",
       company: "North-West University",
       duration: "Feb 2023 - June 2023",
       description:
-        "I also held the position of Marker, responsible for assessing practical reports, class tests, and exams, providing thorough and objective feedback. This role demanded exceptional attention to detail, particularly when students faced challenges and required prompt assistance to continue their work. Additionally, I efficiently managed substantial quantities of lab materials, demonstrating my expertise in lab organization and resource management. Collaborating closely with fellow demonstrators enhanced my teamwork and communication abilities as we efficiently delegated tasks and supported one another, fostering a seamless and productive learning atmosphere for our students.",
-    },
+      "In my role as Marker at North-West University, I meticulously assessed practical reports, class tests, and exams, offering comprehensive and objective feedback to students. With a keen eye for detail, I provided prompt assistance to students facing challenges, ensuring their continuous progress. Moreover, I adeptly managed extensive quantities of lab materials, showcasing my organizational prowess and resource management skills. Collaborating closely with fellow demonstrators, we effectively delegated tasks and supported one another, fostering a collaborative and productive learning environment for our students.",
+      },
     // Add more professional experience entries as needed
   ];
 
@@ -390,11 +404,11 @@ export default function EnvironmentalScientistCV() {
           <Grid item xs={12}>
             <Divider className={classes.divider} />
           </Grid>
-          {/* Past Work Experience */}
+          {/* Work Experience */}
           <Grid item xs={12}>
             <Container>
               <Typography variant="h5" className={classes.sectionHeading}>
-                Past Work Experience <WorkIcon fontSize="large" />
+                Work Experience <WorkIcon fontSize="large" />
               </Typography>
               {professionalExperience.map((experience, index) => (
                 <Card key={index} className={classes.card} elevation={3}>
@@ -443,7 +457,7 @@ export default function EnvironmentalScientistCV() {
               </Typography>
               <Typography paragraph>
                 Golden Key International Honour Society Award (2022): I was
-                recognized for academic excellence at North-West University,
+                recognized for academic excellence at the North-West University,
                 signifying placement within the top 15% of my class. This
                 distinction underscores my dedication to academic achievement
                 and commitment to continuous learning.
